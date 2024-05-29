@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sjf calculation</title>
+
+  <!-- BOOSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/animation.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/icon/logo2.png" type="image/x-icon">
+
+  <!-- JS -->
+  <script src="js/index.js" type="module"></script>
+</head>
+
+<body>
+  <nav class="navbar px-4 navbar-expand-sm navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="rounded" src="img/icon/logo2.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-center active" aria-current="page" id="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" id="feature">SJF Features</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-container" id="home-page">
+    <div class="container-hero"></div>
+    <div class="container mb-5 pb-5">
+      <section class="container text-center">
+        <p class="h1 fw-bold">HELLO</p>
+        <p>
+          <span class="h4">Kami dari kelompok 5 yang beranggotakan:</span>
+          <br>Rifki Ramdani <br>Hanif Luqman Muttaqin <br>Dzikra Ilham Ilahi <br>Fikri Akmaluddin
+        </p>
+        <p class="mb-5">
+          Kami membuat sebuah simple website yang bisa menghitung sebuah program penjadwalan CPU dengan algoritma SJF.
+        </p>
+      </section>
+
+      <section class="container container-section-2">
+        <p class="h5">Pengertian Algoritma SJF</p>
+        <p class="mb-5">
+          Algoritma Shortest Job First (SJF) adalah salah satu algoritma penjadwalan proses yang umum digunakan dalam
+          sistem operasi.
+          Algoritma ini menjadwalkan proses berdasarkan burst time terpendek terlebih dahulu.
+          Burst time adalah waktu yang dibutuhkan oleh proses untuk menyelesaikan eksekusinya tanpa interupsi.
+        </p>
+      </section>
+
+      <section class="container">
+        <p class="h5">Cara Kerja Algoritma SJF</p>
+        <p class="mb-5">
+          Sistem operasi akan memelihara antrian dari sebuah proses yang sudah siap untuk di eksekusi (ready queque).
+          Lalu ketika CPU dalam keadaan idle, sistem operasi akan memilih proses yang memiliki burst time terpendek dari
+          antrian.
+          Setelah sistem operasi memilih proses yang memiliki burst time yang paling pendek, selanjutnya proses tersebut
+          akan dieksekusi
+          oleh CPU hingga selesai. Langkah tersebut akan dilakukan secara berulang-ulang sampai semua permintaan proses
+          telah ditangani.
+        </p>
+      </section>
+
+      <section class="container">
+        <div class="d-flex gap-5 mb-5 mt-5 px-5 responsive-flex">
+          <div>
+            <p class="h5">Kelebihan</p>
+            <ul>
+              <li>Algoritma SJF meminimalkan average waiting time dan average turnaroundtime.</li>
+              <li>Algoritma SJF cocok untuk sistem yang sensitif terhadap waktu, seperti sistem real-time.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="h5">Kekurangan</p>
+            <ul>
+              <li>Algoritma SJF membutuhkan informasi burst time yang akurat untuk setiap proses.</li>
+              <li>Algoritma SJF menyebabkan starvation bagi proses yang memiliki burst time panjang.</li>
+              <li>Algoritma SJF tidak mempertimbangkan prioritas proses.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <p class="h5">Implementasi Algoritma SJF Pada Dunia Nyata</p>
+        <p>
+        <ul>
+          <li>
+            <span class="span-li">Penjadwalan Pesawat di Bandara</span> <br>
+            <p class="d-flex flex-column container-image">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="img/model-planes-airplanes-miniatur-wunderland-hamburg-163792.jpeg" alt="Bandara"
+                class="image-external">
+            </div>
+            Bandara menggunakan algoritma penjadwalan untuk menentukan pesawat mana yang akan mendarat dan lepas landas
+            terlebih dahulu.
+            Selain itu, algoritma SJF juga dapat digunakana untuk
+            memprioritaskan pesawat kecil (seperti pesawat pribadi) daripada pesawat besar (seperti pesawat komersial).
+            </p>
+          </li>
+          <br>
+          <li>
+            <span class="span-li">Produksi di Pabrik</span> <br>
+            <p class="d-flex flex-column container-image">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="img/pexels-photo-1267338.jpeg" alt="Pabrik" class="image-external">
+            </div>
+            Seperti yang kita ketahui pabrik merupakan tempat untuk memproduksi banyak produk baik itu makanan, minuman,
+            ataupun barang.
+            Selain penjadwalan pesawat di bandara, pemroduksian barang di sebuah pabrik juga menerapkan algoritma SJF.
+            Barang yang lebih
+            mudah dan memiliki waktu pemrosesan yang cepat dalam pembuatannya maka akan didahulukan terlebih dahulu.
+            </p>
+          </li>
+          <br>
+          <li>
+            <span class="span-li">Pelayanan Restoran</span> <br>
+            <p class="d-flex flex-column container-image">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="img/pexels-photo-3009793.jpeg" alt="Waiter" class="image-external">
+            </div>
+            Pelayanan di restoran juga menerapkan algoritma ini untuk melayani customernya. Sebagai contoh, customer
+            yang
+            memesan air putih
+            pesanannya akan datang lebih dulu daripada customer yang memeran pizza. Bayangkan jika sebuah restoran tidak
+            menerapkan hal
+            seperti itu, akan banyak customer yang batal memesan karena akan terasa sia-sia jika harus meluangkan banyak
+            waktu untuk
+            satu gelas air putih.
+            </p>
+          </li>
+        </ul>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Feature Algoritma Calculation -->
+  <div class="pb-5 main-container hidden" id="sjf-feature">
+    <div class="container container-feature">
+      <p class="h5 label-sjf-feature">Perhitungan Algoritma SJF untuk penjadwalan sebuah proses</p>
+      <div class="container-child-feature">
+        <form class="container-inputan mt-5 d-flex align-items-end flex-column" id="form-calculation">
+          <div class="mb-3 inputan">
+            <label for="exampleInputEmail1" class="form-label">Nama Proses</label>
+            <input type="text" class="form-control" id="processName" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3 inputan">
+            <label for="exampleInputPassword1" class="form-label">Burst Time</label>
+            <input type="number" class="form-control" id="burstTime" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="container mt-5 container-table-average">
+          <div class="table-wrapper">
+            <table class="table table-hover" id="table-result-proses">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nama Proses</th>
+                  <th scope="col" class="text-center">Burst Time</th>
+                  <th scope="col" class="text-center">Waiting Time</th>
+                  <!-- <th scope="col">Average Time</th> -->
+                </tr>
+              </thead>
+              <tbody id="container-body-table">
+                <!-- ISI DATA DARI JS -->
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p class="h5" id="average-time">Average Time : 0</p>
+            <p class="h5" id="turn-around-time">Turn Around Time : 0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-container container-footer">
+    <div class="wrapper-footer">
+      <div class="container pt-4 container-child-footer">
+        <div>
+          <img src="img/icon/logo2.png" alt="logo" class="logo-footer">
+        </div>
+        <div class="container-other">
+          <div class="footer-section">
+            <p class="h5">THANKS TO</p>
+            <p class="h5 child"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+            <p class="h5 child"><a href="https://www.youtube.com/" target="_blank">YouTube</a></p>
+          </div>
+          <div class="footer-section">
+            <p class="h5">CONTACT</p>
+            <p class="h5 child"><a href="https://www.instagram.com/ramdrifki3/" target="_blank">Instagram</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="mb-0">© 2024 Kelompok 5. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
